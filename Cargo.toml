@@ -1,11 +1,11 @@
 [package]
 name = "sidebar"
-version = "0.0.0"
+version = "0.0.1"
 edition = "2024"
 rust-version = "1.85"
 description = "🗃️ A highly customizable sidebar component for WASM frameworks like Yew, Dioxus, and Leptos."
 license = "MIT"
-keywords = ["sidebar", "navigation", "yew", "dioxus", "leptos", "wasm"]
+keywords = ["sidebar", "yew", "dioxus", "leptos", "wasm"]
 categories = ["gui", "web-programming", "wasm"]
 repository = "https://github.com/opensass/sidebar"
 documentation = "https://docs.rs/sidebar"
