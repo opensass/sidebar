@@ -1,6 +1,6 @@
 [package]
 name = "sidebar"
-version = "0.0.1"
+version = "0.1.0"
 edition = "2024"
 rust-version = "1.89"
 description = "🗃️ A highly customizable sidebar component for WASM frameworks like Yew, Dioxus, and Leptos."
