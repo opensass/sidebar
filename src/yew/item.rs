@@ -76,16 +76,16 @@ pub fn menu_item(props: &MenuItemProps) -> Html {
         Callback::from(move |e: MouseEvent| {
             e.prevent_default();
             let label = label.clone();
-            if let Some(win) = window() {
-                if let Ok(url) = web_sys::Url::new(&win.location().href().unwrap()) {
-                    let params = UrlSearchParams::new_with_str(url.search().as_str()).unwrap();
-                    params.set("selected", &label);
-                    url.set_search(&params.to_string().as_string().unwrap());
-                    win.history()
-                        .unwrap()
-                        .push_state_with_url(&JsValue::NULL, "", Some(&url.href()))
-                        .ok();
-                }
+            if let Some(win) = window()
+                && let Ok(url) = web_sys::Url::new(&win.location().href().unwrap())
+            {
+                let params = UrlSearchParams::new_with_str(url.search().as_str()).unwrap();
+                params.set("selected", &label);
+                url.set_search(&params.to_string().as_string().unwrap());
+                win.history()
+                    .unwrap()
+                    .push_state_with_url(&JsValue::NULL, "", Some(&url.href()))
+                    .ok();
             }
             selected.set(label);
         })
