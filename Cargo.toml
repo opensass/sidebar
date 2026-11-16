@@ -2,14 +2,14 @@
 name = "sidebar"
 version = "0.0.1"
 edition = "2024"
-rust-version = "1.85"
+rust-version = "1.89"
 description = "🗃️ A highly customizable sidebar component for WASM frameworks like Yew, Dioxus, and Leptos."
 license = "MIT"
 keywords = ["sidebar", "yew", "dioxus", "leptos", "wasm"]
 categories = ["gui", "web-programming", "wasm"]
 repository = "https://github.com/opensass/sidebar"
 documentation = "https://docs.rs/sidebar"
-homepage = "https://github.com/opensass/sidebar"
+homepage = "https://kit.opensass.org"
 readme = "README.md"
 authors = ["Mahmoud Harmouch <oss@wiseai.dev>"]
 exclude = ["/assets", "/examples"]
@@ -18,9 +18,9 @@ exclude = ["/assets", "/examples"]
 
 [dependencies]
 yew = { version = "0.23.0", default-features = false, optional = true }
-dioxus = { version = "0.6.3", optional = true }
-leptos = { version = "0.8.2", optional = true }
-web-sys = { version = "0.3.77", features = ["Window",]}
+dioxus = { version = "0.7.10", optional = true }
+leptos = { version = "0.8.23", optional = true }
+web-sys = { version = "0.3.107", features = ["Window",]}
 
 [features]
 yew = ["dep:yew"]
